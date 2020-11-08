@@ -29,9 +29,11 @@ RSpec.describe CurrentWeather do
     current_weather = CurrentWeather.new(data)
 
     expect(current_weather).to be_a(CurrentWeather)
-    expect(current_weather.date_time).to eq(Time.at(data[:dt]))
-    expect(current_weather.sunrise).to eq(Time.at(data[:sunrise]))
-    expect(current_weather.sunset).to eq(Time.at(data[:sunset]))
+
+    expect(current_weather.formatted_time(data[:dt])).to eq('2020-11-07 16:21:39 -0700')
+    expect(current_weather.date_time).to eq(current_weather.formatted_time(data[:dt]))
+    expect(current_weather.sunrise).to eq(current_weather.formatted_time(data[:sunrise]))
+    expect(current_weather.sunset).to eq(current_weather.formatted_time(data[:sunset]))
     expect(current_weather.temp).to eq(data[:temp])
     expect(current_weather.feels_like).to eq(data[:feels_like])
     expect(current_weather.humidity).to eq(data[:humidity])

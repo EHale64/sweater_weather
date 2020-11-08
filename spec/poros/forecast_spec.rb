@@ -163,6 +163,7 @@ RSpec.describe Forecast do
 
     forecast = Forecast.new(data)
     expect(forecast).to be_a(Forecast)
+    expect(forecast.id).to eq(nil)
     expect(forecast.current_weather).to be_a(CurrentWeather)
 
     expect(forecast.daily_weather).to be_an(Array)

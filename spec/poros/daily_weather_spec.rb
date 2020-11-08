@@ -39,9 +39,10 @@ RSpec.describe DailyWeather do
 
     expect(daily).to be_a(DailyWeather)
 
-    expect(daily.date).to eq(Time.at(data[:dt]))
-    expect(daily.sunrise).to eq(Time.at(data[:sunrise]))
-    expect(daily.sunset).to eq(Time.at(data[:sunset]))
+    expect(daily.formatted_time(data[:dt])).to eq('2020-11-07 11:00:00 -0700')
+    expect(daily.date).to eq(daily.formatted_time(data[:dt]))
+    expect(daily.sunrise).to eq(daily.formatted_time(data[:sunrise]))
+    expect(daily.sunset).to eq(daily.formatted_time(data[:sunset]))
     expect(daily.max_temp).to eq(data[:temp][:max])
     expect(daily.min_temp).to eq(data[:temp][:min])
     expect(daily.conditions).to eq(data[:weather][0][:description])
