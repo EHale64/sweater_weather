@@ -7,7 +7,6 @@ RSpec.describe 'When given a city and state' do
     get '/api/v1/forecast',params: {location: city_state}
 
     expect(response).to be_successful
-    # require "pry"; binding.pry
     expect(response.body).to be_a(String)
     json = JSON.parse(response.body, symbolize_names: true)
   end
