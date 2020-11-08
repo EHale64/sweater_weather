@@ -1,6 +1,6 @@
 class HourlyWeather
   attr_reader :time,
-              :temp,
+              :temperature,
               :wind_speed,
               :wind_direction,
               :conditions,
@@ -8,7 +8,7 @@ class HourlyWeather
 
   def initialize(hourly_params)
     @time = formatted_time(hourly_params[:dt])
-    @temp = hourly_params[:temp]
+    @temperature = hourly_params[:temp]
     @wind_speed = hourly_params[:wind_speed].to_s + ' mph'
     @wind_direction = wind_dir(hourly_params[:wind_deg])
     @conditions = hourly_params[:weather][0][:description]
