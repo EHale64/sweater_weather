@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'When given a city and state' do
-  it 'returns a weather data as json' do
+  it 'returns a weather data as json', :vcr do
     city_state = 'denver,co'
 
     get '/api/v1/forecast',params: {location: city_state}
