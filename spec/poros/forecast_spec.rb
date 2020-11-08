@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Forecast do
-  it 'should be a forcast' do
+  it 'should be a forecast' do
     data = { current: {
         "dt": 1604791299,
         "sunrise": 1604756162,
@@ -163,7 +163,6 @@ RSpec.describe Forecast do
 
     forecast = Forecast.new(data)
     expect(forecast).to be_a(Forecast)
-    expect(forecast.id).to eq(nil)
     expect(forecast.current_weather).to be_a(CurrentWeather)
 
     expect(forecast.daily_weather).to be_an(Array)
