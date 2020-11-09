@@ -11,6 +11,7 @@ class Api::V1::TrailsController < ApplicationController
 
     response = conn.get('/data/get-trails') do |f|
       f.params['maxDistance'] = 10
+      f.params['sort'] = 'distance'
       f.params['lat'] = geolocation[:lat]
       f.params['lon'] = geolocation[:lng]
     end
