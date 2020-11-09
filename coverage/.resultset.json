@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/erichale/turing/3module/projects/sweater_weather/spec/requests/api/v1/trails_spec.rb": {
+      "/Users/erichale/turing/3module/projects/sweater_weather/spec/poros/trail_spec.rb": {
         "lines": [
           1,
           null,
@@ -9,12 +9,38 @@
           1,
           1,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
           null,
-          0,
-          0,
-          null,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -298,7 +324,7 @@
           null,
           null,
           1,
-          2,
+          1,
           null,
           null,
           null,
@@ -321,53 +347,25 @@
           null
         ]
       },
-      "/Users/erichale/turing/3module/projects/sweater_weather/app/controllers/api/v1/trails_controller.rb": {
+      "/Users/erichale/turing/3module/projects/sweater_weather/app/poros/trail.rb": {
         "lines": [
           1,
           1,
-          1,
-          1,
-          1,
-          1,
           null,
           null,
-          1,
-          1,
-          1,
+          null,
+          null,
           1,
           null,
           1,
           1,
-          null,
-          null
-        ]
-      },
-      "/Users/erichale/turing/3module/projects/sweater_weather/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/erichale/turing/3module/projects/sweater_weather/app/services/geolocation_service.rb": {
-        "lines": [
           1,
           1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1604939972
+    "timestamp": 1604940883
   }
 }
