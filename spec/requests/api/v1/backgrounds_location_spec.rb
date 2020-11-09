@@ -8,6 +8,8 @@ RSpec.describe 'When given a city and state' do
 
     expect(response).to be_successful
     expect(response.body).to be_a(String)
+
     json = JSON.parse(response.body, symbolize_names: true)
+    require "pry"; binding.pry
   end
 end
