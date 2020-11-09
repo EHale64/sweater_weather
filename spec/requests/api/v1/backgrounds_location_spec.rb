@@ -20,7 +20,7 @@ RSpec.describe 'When given a city and state' do
     expect(json[:data][:type]).to eq('image')
     expect(json[:data]).to have_key(:attributes)
     expect(json[:data][:attributes]).to be_a(Hash)
-
+    
     expect(json[:data][:attributes]).to have_key(:image)
     expect(json[:data][:attributes][:image]).to be_a(Hash)
 
