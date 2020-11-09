@@ -27,7 +27,7 @@ RSpec.describe Image do
     image = Image.new(city_state, data)
 
     expect(image).to be_an(Image)
-
+    expect(image.id).to eq(nil)
     expect(image.location).to eq(city_state)
     expect(image.image_url).to eq(data[:src][:original])
     expect(image.credit).to be_a(Credit)

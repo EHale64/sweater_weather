@@ -11,7 +11,7 @@ class Api::V1::BackgroundsController < ApplicationController
     end
 
     json = JSON.parse(response.body, symbolize_names: true)
-    
-    Image.new(location, json[:photos][0])
+
+    render json: ImageSerializer.new(Image.new(location, json[:photos][0]))
   end
 end
