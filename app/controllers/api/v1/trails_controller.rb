@@ -1,7 +1,6 @@
 class Api::V1::TrailsController < ApplicationController
   def show
     start = params[:location]
-
     geolocation = GeolocationService.get_geolocation(start)
     weather = WeatherService.get_weather(geolocation)
 
