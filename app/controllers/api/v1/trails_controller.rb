@@ -18,8 +18,6 @@ class Api::V1::TrailsController < ApplicationController
 
     json = JSON.parse(response.body, symbolize_names: true)
 
-    json[:trails].map do |trail|
-      Trail.new(trail, start)
-    end
+    Trail.new(start, weather[:current], json[:trails])
   end
 end

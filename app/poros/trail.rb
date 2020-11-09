@@ -1,15 +1,17 @@
 class Trail
-  attr_reader :name,
-              :summary,
-              :difficulty,
-              :location,
-              :distance_to_trail
+  attr_reader :location,
+              :forecast,
+              :trails
 
-  def initialize(trail_params, from)
-    @name = trail_params[:name]
-    @summary = trail_params[:summary]
-    @difficulty = trail_params[:difficulty]
-    @location = trail_params[:location]
-    @distance_to_trail = GeolocationService.get_distance(from, trail_params[:location])
+  def initialize(location, forecast, trails)
+    @location = location
+    @forecast = TrailForecast.new(forecast)
+    @trails = all_trails(trails)
+  end
+
+  def all_trails(array_of_trails)
+    array_of_trails.map do |trail|
+      Trails.new(trail, location)
+    end
   end
 end

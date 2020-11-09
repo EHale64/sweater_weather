@@ -2,8 +2,6 @@ require 'rails_helper'
 
 RSpec.describe TrailForecast do
   it 'should be a trail forecast object' do
-    location = 'denver,co'
-
     data = {
         "dt": 1604802998,
         "sunrise": 1604756162,
@@ -28,10 +26,9 @@ RSpec.describe TrailForecast do
         ]
     }
 
-    trail_forecast = TrailForecast.new(location, data)
+    trail_forecast = TrailForecast.new(data)
 
     expect(trail_forecast).to be_a(TrailForecast)
-    expect(trail_forecast.location).to eq(location)
     expect(trail_forecast.summary).to eq(data[:weather][0][:description])
     expect(trail_forecast.temperature).to eq(data[:temp])
   end
