@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'When given a city and state' do
-  it 'it returns json data' do
+  it 'it returns json data', :vcr do
     city_state = 'denver,co'
 
     get '/api/v1/trails', params: {location: city_state}

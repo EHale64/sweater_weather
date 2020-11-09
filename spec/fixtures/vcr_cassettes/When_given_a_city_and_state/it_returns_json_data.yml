@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://open.mapquestapi.com/geocoding/v1/address?key=<GEOLOCATION_API_KEY>&location=denver,co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 09 Nov 2020 16:29:27 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '2438'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Mon, 09 Nov 2020 16:29:27 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=EF8D71104475BAE692BA434DAD059FD3; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2020 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2020 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":39.739154,"lng":-104.984703},"displayLatLng":{"lat":39.739154,"lng":-104.984703},"mapUrl":"http://open.mapquestapi.com/staticmap/v5/map?key=<GEOLOCATION_API_KEY>&type=map&size=225,160&locations=39.7391536,-104.9847034|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-1411396420"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XCX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":39.734838,"lng":-104.965327},"displayLatLng":{"lat":39.734838,"lng":-104.965327},"mapUrl":"http://open.mapquestapi.com/staticmap/v5/map?key=<GEOLOCATION_API_KEY>&type=map&size=225,160&locations=39.7348381,-104.9653271|marker-sm-50318A-2&scalebar=true&zoom=9&rand=-296426468"},{"street":"Denver","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Fountain","adminArea5Type":"City","adminArea4":"El
+        Paso County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"8017","geocodeQualityCode":"B1AXX","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":38.67294,"lng":-104.702767},"displayLatLng":{"lat":38.67294,"lng":-104.702767},"mapUrl":"http://open.mapquestapi.com/staticmap/v5/map?key=<GEOLOCATION_API_KEY>&type=map&size=225,160&locations=38.67294,-104.702767|marker-sm-50318A-3&scalebar=true&zoom=15&rand=-1566099144"}]}]}'
+  recorded_at: Mon, 09 Nov 2020 16:29:27 GMT
+recorded_with: VCR 6.0.0
