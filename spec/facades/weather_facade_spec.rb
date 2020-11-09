@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'Weather Facade' do
+RSpec.describe WeatherFacade do
   it 'can return a Forecast object for a city', :vcr do
-    city = 'denver, co'
+    city = 'denver,co'
 
     forecast = WeatherFacade.city_weather(city)
 

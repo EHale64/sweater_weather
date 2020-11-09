@@ -5,7 +5,7 @@ class Image
               :image_url,
               :credit
 
-  def initialize(location = nil , image_params)
+  def initialize(location, image_params)
     @id = nil
     @location = location
     @image_url = image_params[:src][:original]

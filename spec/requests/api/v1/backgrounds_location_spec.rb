@@ -20,23 +20,23 @@ RSpec.describe 'When given a city and state' do
     expect(json[:data][:type]).to eq('image')
     expect(json[:data]).to have_key(:attributes)
     expect(json[:data][:attributes]).to be_a(Hash)
-    require "pry"; binding.pry
+
     expect(json[:data][:attributes]).to have_key(:image)
-    expect(json[:data][:attributes][:image]).to be_a(String)
+    expect(json[:data][:attributes][:image]).to be_a(Hash)
 
-    expect(json[:data][:attributes]).to have_key(:image_url)
-    expect(json[:data][:attributes][:image_url]).to be_a(String)
+    expect(json[:data][:attributes][:image]).to have_key(:image_url)
+    expect(json[:data][:attributes][:image][:image_url]).to be_a(String)
 
-    expect(json[:data][:attributes]).to have_key(:credit)
-    expect(json[:data][:attributes][:credit]).to be_a(Credit)
+    expect(json[:data][:attributes][:image]).to have_key(:credit)
+    expect(json[:data][:attributes][:image][:credit]).to be_a(Hash)
 
-    expect(json[:data][:attributes][:credit]).to have_key(:source)
-    expect(json[:data][:attributes][:credit][:source]).to be_a(String)
+    expect(json[:data][:attributes][:image][:credit]).to have_key(:source)
+    expect(json[:data][:attributes][:image][:credit][:source]).to be_a(String)
 
-    expect(json[:data][:attributes][:credit]).to have_key(:author)
-    expect(json[:data][:attributes][:credit][:author]).to be_a(String)
+    expect(json[:data][:attributes][:image][:credit]).to have_key(:author)
+    expect(json[:data][:attributes][:image][:credit][:author]).to be_a(String)
 
-    expect(json[:data][:attributes][:credit]).to have_key(:logo)
-    expect(json[:data][:attributes][:credit][:logo]).to be_a(String)
+    expect(json[:data][:attributes][:image][:credit]).to have_key(:logo)
+    expect(json[:data][:attributes][:image][:credit][:logo]).to be_a(String)
   end
 end
