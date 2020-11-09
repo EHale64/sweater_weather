@@ -18,6 +18,7 @@ RSpec.describe GeolocationService do
 
     distance = GeolocationService.get_distance(from, to)
 
-    expect(distance).to be_a(String)
+    expect(distance).to be_a(Numeric)
+    expect(distance).to eq(28.536)
   end
 end
