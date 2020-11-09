@@ -1,6 +1,5 @@
 class Image
   attr_reader :id,
-              :image,
               :location,
               :image_url,
               :credit
