@@ -18,6 +18,6 @@ class Api::V1::TrailsController < ApplicationController
 
     json = JSON.parse(response.body, symbolize_names: true)
 
-    Trail.new(start, weather[:current], json[:trails])
+    render json: TrailSerializer.new(Trail.new(start, weather[:current], json[:trails]))
   end
 end
