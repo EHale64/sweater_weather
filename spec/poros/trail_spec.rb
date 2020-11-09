@@ -2,39 +2,40 @@ require 'rails_helper'
 
 RSpec.describe Trail do
   it 'should be a trail object' do
+    from = 'denver,co'
     data = {
-            "id": 7011192,
-            "name": "Boulder Skyline Traverse",
+            "id": 7006781,
+            "name": "Dakota Ridge to Sanitas Valley Loop",
             "type": "Recommended Route",
-            "summary": "The classic long mountain route in Boulder.",
-            "difficulty": "black",
-            "stars": 4.7,
-            "starVotes": 93,
-            "location": "Superior, Colorado",
-            "url": "https://www.hikingproject.com/trail/7011192/boulder-skyline-traverse",
-            "imgSqSmall": "https://cdn2.apstatic.com/photos/hike/7039883_sqsmall_1555092747.jpg",
-            "imgSmall": "https://cdn2.apstatic.com/photos/hike/7039883_small_1555092747.jpg",
-            "imgSmallMed": "https://cdn2.apstatic.com/photos/hike/7039883_smallMed_1555092747.jpg",
-            "imgMedium": "https://cdn2.apstatic.com/photos/hike/7039883_medium_1555092747.jpg",
-            "length": 17.3,
-            "ascent": 5446,
-            "descent": -5524,
-            "high": 8446,
-            "low": 5424,
-            "longitude": -105.2582,
-            "latitude": 39.9388,
-            "conditionStatus": "All Clear",
-            "conditionDetails": "Dry",
-            "conditionDate": "2020-09-16 14:37:11"
+            "summary": "A technical ascent with a great view of Boulder, followed by a nice, open downhill pitch.",
+            "difficulty": "blue",
+            "stars": 4,
+            "starVotes": 8,
+            "location": "Boulder, Colorado",
+            "url": "https://www.hikingproject.com/trail/7006781/dakota-ridge-to-sanitas-valley-loop",
+            "imgSqSmall": "https://cdn2.apstatic.com/photos/hike/7000176_sqsmall_1554158942.jpg",
+            "imgSmall": "https://cdn2.apstatic.com/photos/hike/7000176_small_1554158942.jpg",
+            "imgSmallMed": "https://cdn2.apstatic.com/photos/hike/7000176_smallMed_1554158942.jpg",
+            "imgMedium": "https://cdn2.apstatic.com/photos/hike/7000176_medium_1554158942.jpg",
+            "length": 2.3,
+            "ascent": 458,
+            "descent": -458,
+            "high": 5961,
+            "low": 5503,
+            "longitude": -105.2942,
+            "latitude": 40.0207,
+            "conditionStatus": "Unknown",
+            "conditionDetails": nil,
+            "conditionDate": "1970-01-01 00:00:00"
         }
 
-    trail = Trail.new(data)
+    trail = Trail.new(data, from)
 
     expect(trail).to be_a(Trail)
     expect(trail.name).to eq(data[:name])
     expect(trail.summary).to eq(data[:summary])
     expect(trail.difficulty).to eq(data[:difficulty])
     expect(trail.location).to eq(data[:location])
-    expect(trail.distance_to_trail).to be_a(String)
+    expect(trail.distance_to_trail).to be_a(Numeric)
   end
 end
