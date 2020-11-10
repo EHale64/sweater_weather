@@ -29,6 +29,7 @@ RSpec.describe 'When given a city and state' do
 
     expect(json[:data][:attributes]).to have_key(:hourly_weather)
     expect(json[:data][:attributes][:hourly_weather]).to be_an(Array)
+    expect(json[:data][:attributes][:hourly_weather].count).to eq(8)
   end
 
   it 'returns expected data for current_weather', :vcr do

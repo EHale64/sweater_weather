@@ -18,7 +18,7 @@ class Forecast
   end
 
   def hourly_forecasts(hourly_params)
-    hourly_params.map do |hour|
+    hourly_params.first(8).map do |hour|
       HourlyWeather.new(hour)
     end
   end
