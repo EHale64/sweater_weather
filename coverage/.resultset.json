@@ -311,6 +311,7 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null
@@ -349,6 +350,40 @@
           5,
           5,
           null,
+          null
+        ]
+      },
+      "/Users/erichale/turing/3module/projects/sweater_weather/spec/models/users_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/erichale/turing/3module/projects/sweater_weather/app/models/users.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/erichale/turing/3module/projects/sweater_weather/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
           null
         ]
       },
@@ -1119,6 +1154,43 @@
           null
         ]
       },
+      "/Users/erichale/turing/3module/projects/sweater_weather/spec/requests/api/v1/user_registration_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/erichale/turing/3module/projects/sweater_weather/spec/services/geolocation_service_spec.rb": {
         "lines": [
           1,
@@ -1280,8 +1352,35 @@
           1,
           null
         ]
+      },
+      "/Users/erichale/turing/3module/projects/sweater_weather/app/controllers/api/v1/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/erichale/turing/3module/projects/sweater_weather/app/serializers/users_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1604955606
+    "timestamp": 1604975999
   }
 }
