@@ -17,9 +17,9 @@ RSpec.describe 'Road Trip endpoint' do
     @user = Users.last
   end
 
-  it 'can return data for a road trip' do
+  it 'can return data for a road trip', :vcr do
     road_trip_params = ({ origin: 'Denver,CO',
-                          destination: 'Peublo,CO',
+                          destination: 'Pueblo,CO',
                           api_key: @user.api_key })
     headers = {'CONTENT_TYPE' => 'application/json'}
 
