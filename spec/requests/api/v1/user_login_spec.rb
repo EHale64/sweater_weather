@@ -8,6 +8,7 @@ RSpec.describe 'Users login endpoint' do
     headers = {'CONTENT_TYPE' => 'application/json'}
     post '/api/v1/users', headers: headers, params: JSON.generate(@user_params)
   end
+
   it 'can login a user and return that user api key' do
     user_login_params = ({ email: @user_params[:email],
                          password: @user_params[:password]
