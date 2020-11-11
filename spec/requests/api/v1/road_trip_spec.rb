@@ -25,7 +25,7 @@ RSpec.describe 'Road Trip endpoint' do
 
     post '/api/v1/road_trip', headers: headers, params: JSON.generate(road_trip_params)
     json = JSON.parse(response.body, symbolize_names: true)
-    require "pry"; binding.pry
+    # require "pry"; binding.pry
     expect(json).to be_a(Hash)
     expect(json).to have_key(:data)
     expect(json[:data]).to be_a(Hash)

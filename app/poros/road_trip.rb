@@ -16,10 +16,11 @@ class RoadTrip
   end
 
   def check_hours(arrival_time)
-    if arrival_time.to_time.min > 30
-      arrival_time.to_time.hour + 1
+    time = arrival_time.to_time
+    if time.min > 30
+      time.hour + 1
     else
-      arrival_time.to_time.hour
+      time.hour
     end
   end
 end
