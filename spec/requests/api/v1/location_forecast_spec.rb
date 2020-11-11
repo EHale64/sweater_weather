@@ -22,7 +22,6 @@ RSpec.describe 'When given a city and state' do
 
     expect(json[:data][:attributes]).to have_key(:current_weather)
     expect(json[:data][:attributes][:current_weather]).to be_a(Hash)
-
     expect(json[:data][:attributes]).to have_key(:daily_weather)
     expect(json[:data][:attributes][:daily_weather]).to be_an(Array)
     expect(json[:data][:attributes][:daily_weather].count).to eq(5)

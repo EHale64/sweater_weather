@@ -1,6 +1,6 @@
 class Api::V1::BackgroundsController < ApplicationController
   def show
     location = params[:location]
-    render json: ImageSerializer.new(ImageFacade.city_image(location))
+    render json: ImageSerializer.new(ImageFacade.city_image(location)), status: :ok
   end
 end

@@ -7,6 +7,15 @@ class GeolocationService
     json[:results][0][:locations][0][:latLng]
   end
 
+  def self.get_travel_data(from, to)
+   response = conn.get('/directions/v2/route') do |f|
+     f.params['from'] = from
+     f.params['to'] = to
+   end
+  json = JSON.parse(response.body, symbolize_names: true)
+  json[:route]
+  end
+
   def self.conn
     Faraday.new(url: 'http://open.mapquestapi.com/') do |f|
       f.params['key'] = ENV['GEOLOCATION_API_KEY']
