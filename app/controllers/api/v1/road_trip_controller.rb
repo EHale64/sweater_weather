@@ -1,15 +1,14 @@
 class Api::V1::RoadTripController < ApplicationController
   def create
     user = Users.find_by(api_key: params[:api_key])
-    if user
-      travel_data = GeolocationService.get_travel_data(params[:origin], params[:destination])
-      eta = travel_data[:formattedTime]
-      destination_lat_lon = travel_data[:locations][1][:latLng]
-      destination_weather = WeatherService.get_weather(travel_data[:locations][1][:latLng])
-      destination_forecast = Forecast.new(destination_weather).hourly_weather
-      render json: RoadTripSerializer.new(RoadTrip.new(params[:origin], params[:destination], eta, destination_forecast))
+    if params[:origin].nil?
+      render json: { message: 'please give an origin' }, status: :unauthorized
+    elsif params[:destination].nil?
+      render json: { message: 'please give a destination' }, status: :unauthorized
+    elsif user
+      render json: RoadTripSerializer.new(RoadTripFacade.get_road_trip(params[:origin], params[:destination])), status: :created
     else
-      render json: { message: 'no api key' }, status: :unauthorized
+      render json: { message: 'bad credentials' }, status: :unauthorized
     end
   end
 end

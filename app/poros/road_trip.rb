@@ -11,16 +11,16 @@ class RoadTrip
     @end_city = end_city
     @travel_time = travel_time
     @hour = check_hours(travel_time)
-    @forecast = destination_forecast[@hour + 1]
-    @weather_at_eta = { temperature: @forecast.temperature, conditions: @forecast.conditions }
+    @forecast = destination_forecast[@hour - 1] unless @travel_time == 'Impossible to Route'
+    @weather_at_eta = { temperature: @forecast.temperature, conditions: @forecast.conditions } unless @travel_time == 'Impossible to Route'
   end
 
   def check_hours(arrival_time)
-    time = arrival_time.to_time
-    if time.min > 30
-      time.hour + 1
+    time = arrival_time.split(':')
+    if time[1].to_i > 30
+      time[0].to_i + 1
     else
-      time.hour
+      time[0].to_i
     end
   end
 end
