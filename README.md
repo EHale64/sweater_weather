@@ -54,6 +54,10 @@ After adding all the required gems to your gemfile, In your command line run the
 
 ### Testing
 
-Testing in this project 
+Testing in this project is done with `Rspec` with `SimpleCov` checking for test coverage.
+
+#### Running Rspec
+
+In your command line run `$ bundle exec rspec` all tests should pass.  If there are any `vcr` errors please read the [vcr](https://github.com/vcr/vcr) documentation to troubleshoot.
 
 
