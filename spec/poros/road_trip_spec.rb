@@ -11,6 +11,7 @@ RSpec.describe RoadTrip do
     road_trip = RoadTrip.new(from, to, travel_time, destination_forecast)
 
     expect(road_trip).to be_a(RoadTrip)
+    expect(road_trip.id).to eq(nil)
     expect(road_trip.start_city).to eq(from)
     expect(road_trip.end_city).to eq(to)
     expect(road_trip.travel_time).to eq(travel_time)
