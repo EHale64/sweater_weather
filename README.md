@@ -6,7 +6,7 @@
 
 ### System Specifications, API's, and Gems
 
-This project runs on `Ruby 2.5.3` on a `Rails 5.2.4.4` frame work please run `ruby -v` to check you ruby version and `rails -v` to check rails version.
+This project runs on `Ruby 2.5.3` on a `Rails 5.2.4.4` frame work please run `ruby -v` to check your ruby version and `rails -v` to check rails version.
 
 #### API's
 
