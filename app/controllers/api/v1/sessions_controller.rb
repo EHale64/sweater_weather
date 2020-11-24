@@ -2,7 +2,7 @@ class Api::V1::SessionsController < ApplicationController
   def create
     user = Users.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
-      render json: UsersSerializer.new(user), status: :created
+      render json: UsersSerializer.new(user), status: :ok
     elsif params[:email].nil?
       render  json: { message: 'Please fill in email' }, status: :unauthorized
     elsif params[:password].nil?
