@@ -1,7 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   def create
     user = Users.new(user_params)
-
+    
     if user_params[:email].nil?
       render json: {message: 'Please fill in email'}, status: :unauthorized
     elsif user_params[:password].nil?

@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-11-10T20:23:21-07:00">2020-11-10T20:23:21-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-11-24T14:57:14-07:00">2020-11-24T14:57:14-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -1101,7 +1101,7 @@
 
             
 
-            <code class="ruby">    render json: ImageSerializer.new(ImageFacade.city_image(location))</code>
+            <code class="ruby">    render json: ImageSerializer.new(ImageFacade.city_image(location)), status: :ok</code>
           </li>
         </div>
       
@@ -1198,7 +1198,7 @@
 
             
 
-            <code class="ruby">    render json: ForecastSerializer.new(WeatherFacade.city_weather(location))</code>
+            <code class="ruby">    render json: ForecastSerializer.new(WeatherFacade.city_weather(location)), status: :ok</code>
           </li>
         </div>
       
@@ -1350,7 +1350,7 @@
 
             
 
-            <code class="ruby">      render json: RoadTripSerializer.new(RoadTripFacade.get_road_trip(params[:origin], params[:destination]))</code>
+            <code class="ruby">      render json: RoadTripSerializer.new(RoadTripFacade.get_road_trip(params[:origin], params[:destination])), status: :created</code>
           </li>
         </div>
       
@@ -1665,7 +1665,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    </code>
           </li>
         </div>
       

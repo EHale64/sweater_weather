@@ -1,0 +1,18 @@
+language: ruby
+rbenv:
+- 2.5.3
+addons:
+  postgresql: 9.6
+script:
+- bundle exec rails db:{create,migrate} RAILS_ENV=test
+- bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: y1ARiKabVm6i6Onp+n6xGU7rw8mX/mHNLNFSs5tGKxfp8VfPWrvbnIKBOVz1S9ZUsdw9nR8tMBUaydq+N6FGES1Tc7whB3S1rdR5t+uLVKfPWMVuAdw6WTnG/5xqFikR6Vm0OPi/0LAH9daU68sLPpDhSizMo0CW+gElYro7TmyKwDTUZGhKKoPNBbzOFZYOsSO5OxlQ54k4GVB+eQpW+b+6XCibtCc9nKZ7BawP1DfEeggKlikJoysE0smA6cTI4pO22GM+xZCZdv//FRB90Pd4pXWD9p9bZ6Ao4Fkw+mthN4vm1sZBmuP1ZV9O92sGtLU85QBiFz8nDrhkWIZHFByalLAXbJQf4XCu+44LFYBChxm6noc89KfbEV4ZmfbSr5Ra1vB8lvJFkBhfzypkVw6gv7NYvSrcAGl5PP+9psZKWRjouzwn9gPN03VLp+t07TEtw0MpFC98ioSqdXvyV81Kj9ozdNDek6czC+VlWbkKmQ/aCCQo7m5C0eeRlwVa/vIEQ2O2lmy/y38cXjbSghYSJ9zwB8g/DeGYhEsU4B8QmwqRbfRbMK6RrS7MpX86QSvbtJfdV3OwO1MIUYZO7UiHxzAlo+AQ0s+6mwYFnW996xN9WPvp4mY8qEMj4VD6/ZnETyfAsl0KVzIVGKLVBQjGPvYE10dDww7WxZ1coDM=
+  app: sweater-weather2020
+  on:
+    repo: EHale64/sweater_weather
+    branch: main
+  skip_cleanup: 'true'
+  run: rails db:migrate
